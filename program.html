@@ -90,14 +90,14 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Workshop <span class="text-muted">Program</span></h2>
-	  <p>To Be Announced </p>
+
 	<!--	<p class="lead"> <a href="https://sc18.supercomputing.org/session/?sess=sess221">Sunday</a></p> -->
-	<!--    <p class="lead"> <a href="https://sc19.supercomputing.org/session/?sess=sess115">Monday</a></p> -->
+	<p class="lead"> <a href="https://sc20.supercomputing.org/session/?sess=sess209">Thursday</a></p> -->
 	  
 	<!--          <a href=https://denverconvention.com/uploads/pdf/Meeting_Room_Level_Map.pdf><p class="lead">Location: 502-503-504</p></a> -->
-	<!--		<a href=https://sc19.supercomputing.org/session/?sess=sess115><p class="lead">Our workshop program is now available on the SC website.</p></a> -->
-	<!--          <p class="lead">Date: Monday November 18, 2019</p>-->
-	<!--          <p class="lead">Time: 9:00am - 5:00pm</p> -->
+	<a href=https://sc20.supercomputing.org/session/?sess=sess115><p class="lead">Our workshop program is now available on the SC website.</p></a> 
+	 <p class="lead">Date: Thursday November 12, 2020</p>-->
+	<p class="lead">Time: 10:00am - 5:30pm</p> -->
 	<!--	<a href=papers/mlhpc2018_slides.zip><p class="lead">Slides (all slides up)</p></a>
 		<a href=https://dl.acm.org/citation.cfm?id=3146347><p class="lead">Link to papers (now available)</p></a>
         </div>
@@ -107,7 +107,7 @@
         </div>
       </div>
       
-      <!--
+      
        <hr class="featurette-divider">
       
       <div class="row featurette">
@@ -123,26 +123,27 @@
       <hr class="featurette-divider">
 	<div class="row featurette">
 	<div class="col-md-7">
-          <h2 class="lead">Keynote: HPC for ML and ML for HPC - scalability, communication, and programming (9:10 am)<br> </h2>
-	  <p class="lead"><span class="text-muted">Torsten Hoefler, ETH Zürich</span></p>
+          <h2 class="lead">Keynote: Lessons from Archives: Strategies for Collecting Sociocultural Data in Machine Learning
+ 109:10 am)<br> </h2>
+	  <p class="lead"><span class="text-muted">Timnit Gebru, Google</span></p>
           <p> </p>
-	-	<p><a href=papers/1_Keuper.pdf>[Presentation]</a></p> 
+	<!--	<p><a href=papers/1_Keuper.pdf>[Presentation]</a></p> -->
 	</div>
 	</div>
       <hr class="featurette-divider">
 	<div class="row featurette">      
         <div class="col-md-7">
-		<h2 class="lead">Coffee Break (10:00 am)</h2>
+		<h2 class="lead">Coffee Break (11:10 am)</h2>
         </div>
 	</div>
 	  
       <hr class="featurette-divider">
 	    	<div class="row featurette">
 		<div class="col-md-7">
-		<h2 class="lead">Understanding Scalability and Fine-Grain Parallelism of Synchronous Data Parallel Training<br> </h2>
-		<p class="lead"><span class="text-muted">Jiali Li (University of Tennessee), Bogdan Nicolae (Argonne National Laboratory), Justin Wozniak (Argonne National Laboratory), George Bosilca (Univeristy of Tennessee)</span></p>
-		<p>In the age of big data, deep learning has emerged as a powerful tool to extract insight and exploit its value, both in industry and scientific applications. With increasing complexity of learning models and amounts of training data, data-parallel approaches based on frequent all-reduce synchronization steps are increasingly popular. Despite the fact that high-performance computing (HPC) technologies have been designed to address such patterns efficiently, the behavior of data-parallel approaches on HPC platforms is not well understood. To address this issue, in this paper we study the behavior of Horovod, a popular data-parallel approach that relies on MPI, on Theta, a pre-Exascale machine at Argonne National Laboratory. Using two representative applications, we explore two aspects: (1) how performance and scalability is affected by important parameters such as number of nodes, number of workers, threads per node, batch size; (2) how computational phases are interleaved withall-reduce communication phases at fine granularity and what consequences this interleaving has in terms of potential bottlenecks. Our findings show that pipelining of back-propagation, gradient reduction and weight updates mitigate the effects of stragglers during all-reduce only partially. Furthermore, there can be significant delays between weights update, which can be leveraged to mask the overhead of additional background operations that are coupled with the training.</p>
-	<p><a href=papers/2_Cong.pdf>[Presentation]</a></p> 
+		<h2 class="lead">EventGraD: Event-Triggered Communication in Parallel Stochastic Gradient Descent<br> </h2>
+		<p class="lead"><span class="text-muted">Soumyadip Ghosh (University of Notre Dame), Vijay Gupta (University of Notre Dame)</span></p>
+		<p>Communication in parallel systems consumes significant amount of time and energy which often turns out to be a bottleneck in distributed machine learning. In this paper, we present EventGrad - an algorithm with event-triggered communication in parallel stochastic gradient descent. The main idea of this algorithm is to modify the requirement of communication at every epoch to communicating only in certain epochs when necessary. In particular, the parameters are communicated only in the event when the change in their values exceed a threshold. The threshold for a parameter is chosen adaptively based on the rate of change of the parameter. The adaptive threshold ensures that the scheme can be applied to different models on different datasets without any change. We focus on data-parallel training of a popular convolutional neural network used for training the MNIST dataset and show that EventGrad can reduce the communication load by up to 70% while retaining the same level of accuracy.</p>
+	<!-- <p><a href=papers/2_Cong.pdf>[Presentation]</a></p> -->
         	</div>
       		</div>
 	  
@@ -151,10 +152,10 @@
       <hr class="featurette-divider">
 	<div class="row featurette">
 	<div class="col-md-7">
-          <h2 class="lead">Fine-Grained Exploitation of Mixed Precision for Faster CNN Training<br></h2>
-		<p class="lead"><span class="text-muted">J. Travis Johnston (Oak Ridge National Laboratory), Steven R. Young (Oak Ridge National Laboratory), Catherine D. Schuman (Oak Ridge National Laboratory), Junghoon Chae (Oak Ridge National Laboratory), Don D. March (Oak Ridge National Laboratory), Robert M. Patton (Oak Ridge National Laboratory), Thomas E. Potok (Oak Ridge National Laboratory)</span></p>
-		<p>As deep convolutional neural networks (CNNs) have become increasingly popular and successful at an ever-widening number of machine learning tasks specialized hardware has become increasingly available for training and deploying them. NVIDIA's recent Volta architecture includes tensor cores which perform a fused operation reduced and mixed precision (16-bit multiply, 32-bit accumulate). Recent research indicates that, typically, very little is lost (in terms of training accuracy) when half precision is used in place of single precision, and performance gains can be made by doing arithmetic in reduced precision. In this work we demonstrate that making layer-by-layer choices as to the arithmetic/data precision can lead to further performance improvement. In our study of 25,200 CNNs we demonstrate an average speedup (over purely half precision) of 1.27x and speedups as high as 3.64x by appropriately combining single and half precision arithmetic and data types on a layer-by-layer basis.</p>
-		<p><a href=papers/3_Dryden.pdf>[Presentation]</a></p> 
+          <h2 class="lead">A Benders Decomposition Approach to Correlation Clustering<br></h2>
+		<p class="lead"><span class="text-muted">Jovita Lukasik (University of Mannheim), Margret Keuper (University of Mannheim), Maneesh Singh (Verisk Analytics, Inc), Julian Yarkony (Verisk Analytics, Inc)</span></p>
+		<p>We tackle the problem of graph partitioning for image segmentation using correlation clustering (CC), which we treat as an integer linear program (ILP). We reformulate optimization in the ILP so as to admit efficient optimization via Benders decomposition, a classic technique from operations research. Our Benders decomposition formulation has many subproblems, each associated with a node in the CC instance's graph, which can be solved in parallel. Each Benders subproblem enforces the cycle inequalities corresponding to edges with negative (repulsive) weights attached to its corresponding node in the CC instance. We generate Magnanti-Wong Benders rows in addition to standard Benders rows to accelerate optimization. Our Benders decomposition approach provides a promising new avenue to accelerate optimization for CC, and, in contrast to previous cutting plane approaches, theoretically allows for massive parallelization.</p>
+	<!--	<p><a href=papers/3_Dryden.pdf>[Presentation]</a></p> -->
         </div>
         
       </div>
@@ -162,14 +163,14 @@
       <hr class="featurette-divider">
 	<div class="row featurette">    
         <div class="col-md-7">
-          <h2 class="lead">Metaoptimization on a Distributed System for Deep Reinforcement Learning<br></h2>
-		<p class="lead"><span class="text-muted">Greg Heinrich (NVIDIA), Iuri Frosio (NVIDIA)</span></p>
-		<p>Training intelligent agents through reinforcement learning (RL) is a notoriously unstable procedure. Massive parallelization on GPUs and distributed systems has been exploited to generate a large amount of training experiences and consequently reduce instabilities, but the success of training remains strongly influenced by the choice of the hyperparameters. To overcome this issue, we introduce HyperTrick, a new metaoptimization algorithm, and show its effective application to tune hyperparameters in the case of deep RL, while learning to play different Atari games on a distributed system. Our analysis provides evidence of the interaction between the identification of the optimal hyperparameters and the learned policy, that is peculiar of the case of metaoptimization for deep RL. When compared with state-of-the-art metaoptimization algorithms, HyperTrick is characterized by a simpler implementation and it allows learning similar policies, while making a more effective use of the computational resources in a distributed system </p>
-		<p><a href=papers/4_Tsai.pdf>[Presentation]</a></p> 
+          <h2 class="lead">Accelerating GPU-based Machine Learning in Python using MPI Library: A Case Study with MVAPICH2-GDR<br></h2>
+		<p class="lead"><span class="text-muted">Seyedeh Mahdieh Ghazimirsaeed (Ohio State University), Quentin Anthony (Ohio State University),  Aamir Shafi (Ohio State University), Hari Subramoni (Ohio State University), Dhabaleswar K. (DK) Panda (Ohio State University) </span></p>
+		<p>The growth of big data applications during the last decade has led to a surge in the deployment and popularity of machine learning libraries. On the other hand, the high performance offered by GPUs makes them well-suited for machine learning problems. To take advantage of the performance provided by GPUs for machine learning, NVIDIA has recently developed the cuML library. The cuML library is the GPU-counterpart of Scikit-learn and provides similar Pythonic interfaces while hiding the complexities of writing compute kernels for GPUs directly using CUDA. To support execution of machine learning workloads on Multi-Node Multi-GPU (MNMG) systems, the cuML library exploits NVIDIA Collective Communications Library (NCCL) as a backend for collective communications between the processes. On the other hand, MPI is a defacto standard for communication in HPC systems. Amongst various MPI libraries, MVAPICH2-GDR is the pioneer in optimizing communications for GPUs. This paper explores various aspects and challenges of providing MPI-based communication support for GPU accelerated cuML applications. More specifically, it proposes a Python API to take advantage of MPI-based communications for cuML applications. It also gives an in-depth analysis, characterization, and benchmarking of the cuML algorithms such as K-Means, Nearest Neighbors, Random Forest, and tSVD. Moreover, it provides a comprehensive performance evaluation and profiling study for MPI-based versus NCCL-based communication for these algorithms. The evaluation results show that the proposed MPI-based communication approach achieves up to 38%, 20%, 20%, and 26% performance gain for K-Means, Nearest Neighbors, Linear Regression, and tSVD, respectively on up to 32 GPUs. </p>
+<!--		<p><a href=papers/4_Tsai.pdf>[Presentation]</a></p> -->
         </div>
 	</div>
 	  
-      <hr class="featurette-divider">
+ <!--    <hr class="featurette-divider">
 	<div class="row featurette">
 	<div class="col-md-7">
           <h2 class="lead">Scheduling Optimization of Parallel Linear Algebra Algorithms Using Supervised Learning<br></h2>
@@ -177,14 +178,14 @@
           <p>Linear algebra algorithms are used widely in a variety of domains, e.g. machine learning, numerical physics and video games graphics. For all these applications, loop-level parallelism is required to achieve high performance. However, finding the optimal way to schedule the workload between threads is a non-trivial problem because it depends on the structure of the algorithm being parallelized and the hardware the executable is run on. In the realm of Asynchronous Many Task runtime systems, a key aspect of the scheduling problem is predicting the proper chunk-size, where the chunk-size is defined as the number of iterations of a for-loop are assigned to a thread as one task. In this paper, we study the applications of supervised learning models to predict the chunk-size which yields maximum performance on multiple parallel linear algebra operations using the HPX backend of Blaze's linear algebra library. More precisely, we generate our training and tests sets by measuring performance of the application with different chunk-sizes for multiple linear algebra operations; vector-addition, matrix-vector-multiplication, matrix-matrix addition and matrix-matrix-multiplication. We compare the use of logistic regression, neural networks and decision trees with a newly developed decision tree based model in order to predict the optimal value for chunk-size. Our results show that classical decision trees and our custom decision tree model are able to forecast a chunk-size which results in good performance for the linear algebra operations. </p>
 <p><a href=papers/5_Potok.pdf>[Presentation]</a></p>
         </div>  
-	</div>
+	</div> -->
       <hr class="featurette-divider">
 	<div class="row featurette">      
         <div class="col-md-7">
-		<h2 class="lead">Lunch Break (12:30 PM ~ 2:00 PM)</h2>
+		<h2 class="lead">Lunch Break (12:55 PM ~ 2:30 PM)</h2>
         </div>
 	</div>
-      <hr class="featurette-divider">
+ <!--     <hr class="featurette-divider">
 	<div class="row featurette">
 	<div class="col-md-7">
           <h2 class="lead">Parallel Data-Local Training for Optimizing Word2Vec Embeddings for Word and Graph Embeddings<br></h2>
@@ -210,25 +211,37 @@
         <div class="col-md-7">
 		<h2 class="lead">Coffee Break (3:00 PM)</h2>
         </div>
-	</div>
+	</div> -->
       <hr class="featurette-divider">
 	<div class="row featurette">
 	<div class="col-md-7">
-          <h2 class="lead">Keynote: Running large models in minutes: an engineering journey through high performance for AI  (3:30 am)<br> </h2>
-	  <p class="lead"><span class="text-muted">Julie Bernauer, NVIDIA</span></p>
-          <p> From climate modelling to drug design, AI models are not fully part of scientific modelling and AI models are getting more complex and larger every year. The adoption of challenging workloads like the BERT language model and the popularity of Deep Learning performance blogs or benchmarks such as MLPerf highlight the importance of being able to quickly train and tune such models. Until recently, system design for HPC and AI were often done in isolation as the requirements for the platforms where different, making large scientific experimentations difficult. To overcome these gaps, systems are now designed with AI software in mind and scale is introduced in the software design from ground up so that each model running at the edge can be trained in minutes at scale. In this talk we will cover how software leverages the inherent scaling nature of large models and how HPC infrastructures can be built and leveraged as the ideal platforms for fast experimentation and large problems.</p>
-		<p><a href=papers/1_Keuper.pdf>[Presentation]</a></p> 
+          <h2 class="lead">Keynote: Programming Systems of Data  (2:30 am)<br> </h2>
+	  <p class="lead"><span class="text-muted">Michael Garland, NVIDIA</span></p>
+          <p> Machine learning and data analysis thrive on mass quantities of data.  At the
+same time, the cost of data distribution and movement is among the most
+critical factors determining the performance of applications at scale.
+Consequently, scalable high-performance machine learning and data analysis
+requires software environments that support the careful management of data.
+Whereas modern cloud systems provide data stores and services that help
+support efficient delivery of data to applications, the tools at hand for
+developers to efficiently manage distributed data within a running application
+are considerably more limited.  It is particularly challenging to deliver
+high-performance execution across distributed nodes while maintaining software
+modularity and composability.  In this talk, I will focus on developments in
+the design of scalable programming systems that help address these challenges
+by providing data-centric interfaces that provide a convenient notation to the
+developer and dynamic information to the runtime system tasked with scheduling
+the application at peak efficiency.</p>
+<!--		<p><a href=papers/1_Keuper.pdf>[Presentation]</a></p> -->
 	</div>
 	</div>	  	  
       <hr class="featurette-divider">
 	<div class="row featurette">
 	<div class="col-md-7">
-          <h2 class="lead">GradVis: Visualization and Second Order Analysis of Optimization Surfaces During the Training of Deep Neural Networks<br></h2>
-		<p class="lead"><span class="text-muted">Avraam Chatzimichailidis (Fraunhofer Institute for Industrial Mathematics), Janis Keuper (Fraunhofer Institute for Industrial Mathematics), Franz-Josef Pfreundt (Fraunhofer Institute for Industrial Mathematics), Nicolas R. Gauger (University of Kaiserlautern)</span></p>
-		<p>Current training methods for deep neural networks boil down to very high dimensional and non-convex optimization problems which are usually solved by a wide range of stochastic gradient descent methods. While these approaches tend to work in practice, there are still many gaps in the theoretical understanding of key aspects like convergence and generalization guarantees, which are induced by the properties of the optimization surface (loss landscape). In order to gain deeper insights, a number of recent publications proposed methods to visualize and analyze the otimization surfaces. However, the computational cost of these methods are very high, making it hardly possible to use them on larger networks.
-
-In this paper, we present the GradVis Toolbox, an open source library for efficient and scalable visualization and analysis of deep neural network loss landscapes in Tesorflow and PyTorch. Introducing more efficient mathematical formulations and a novel parallelization scheme, GradVis allows to plot 2d and 3d projections of optimization surfaces and trajectories, as well as high resolution second order gradient information for large networks.</p>
- <p><a href=papers/7_Camelo.pdf>[Presentation]</a></p> 
+          <h2 class="lead">Accelerate Distributed Stochastic Descent for Nonconvex Optimization with Momentum<br></h2>
+		<p class="lead"><span class="text-muted">Guojing Cong (IBM Corporation), Tianyi Liu (Georgia Institute of Technology)</span></p>
+		<p>Momentum method has been used extensively in optimizers for deep learn- ing. Recent studies show that distributed train- ing through K-step averaging has many nice properties. We propose a momentum method for such model averaging ap- proaches. At each individual learner level traditional stochas- tic gradient is applied. At the meta-level (global learner level), one momentum term is applied and we call it block mo- mentum. We analyze the convergence and scaling properties of such momentum methods. Our experimental results show that block momentum not only accelerates training, but also achieves better results.</p>
+<!-- <p><a href=papers/7_Camelo.pdf>[Presentation]</a></p> -->
         </div>
         
       </div>
@@ -239,12 +252,29 @@ In this paper, we present the GradVis Toolbox, an open source library for effici
         
         
         <div class="col-md-7">
-          <h2 class="lead">DisCo: Physics-Based Unsupervised Discovery of Coherent Structures in Spatiotemporal Systems<br></h2>
-		<p class="lead"><span class="text-muted">Adam Rupe (University of California, Davis), Nalini Kumar (Intel), Vladislav Epifanov (Intel), Karthik Kashinath (Lawrence Berkeley National Laboratory), Oleksandr Pavlyk (Intel), Frank Schlimbach (Intel), Mostofa Patwary (Baidu USA), Sergey Maidanov (Intel), Victor Lee (Intel), Mr Prabhat (Lawrence Berkeley National Laboratory), James P. Crutchfield (University of California,  Davis)</span></p>
-		<p>Extracting actionable insight from complex unlabeled scientific data is an open challenge and key to unlocking data-driven discovery in science. Complementary and alternative to supervised machine learning approaches, unsupervised physics-based methods based on behavior-driven theories hold great promise. Due to computational limitations, practical application on real-world domain science problems has lagged far behind theoretical development. However, powerful modern supercomputers provide the opportunity to narrow the gap between theory and practical application. We present our first step towards bridging this divide - DisCo - a high-performance distributed workflow for the behavior-driven local causal state theory. DisCo provides a scalable unsupervised physics-based representation learning method that decomposes spatiotemporal systems into their structurally relevant components, which are captured by the latent local causal state variables. In several firsts we demonstrate the efficacy of DisCo in capturing physically meaningful coherent structures from observational and simulated scientific data. To the best of our knowledge, DisCo is also the first application software developed entirely in Python to scale to over 1000 machine nodes, providing good performance along with ensuring domain scientists' productivity. Our capstone experiment, using newly developed and optimized DisCo workflow and libraries, performs unsupervised spacetime segmentation analysis of CAM5.1 climate simulation data, processing an unprecedented 89.5 TB in 6.6 minutes end-to-end using 1024 Intel Haswell nodes on the Cori supercomputer obtaining 91% weak-scaling and 64% strong-scaling efficiency. This enables us to achieve state-of-the-art unsupervised segmentation of coherent spatiotemporal structures in complex fluid flows.</p>
+          <h2 class="lead">High-bypass Learning: Automated Detection of Tumor Cells that Significantly Impact Drug Response<br></h2>
+		<p class="lead"><span class="text-muted">Justin Wozniak (Argonne National Laboratory), Hyunseung Yoo (Argonne National Laboratory), Jamaludin Mohd-Yusof (Los Alamos National Laboratory), Bogdan Nicolae (Argonne National Laboratory), Richard Turgeon (Argonne National Laboratory), Nick Collier (Argonne National Laboratory), Jonathan Ozik (Argonne National Laboratory), Thomas Brettin (Argonne National Laboratory), Rick Stevens (Argonne National Laboratory)</span></p>
+		<p>Machine learning in biomedicine is reliant on the availability of large, high-quality data sets. These corpora are used for training statistical or deep learning -based models that can be validated against other data sets and ultimately used to guide decisions. The quality of these data sets is an essential component of the quality of the models and their decisions. Thus, identifying and inspecting outlier data is critical for evaluating, curating, and using biomedical data sets. Many techniques are available to look for outlier data, but it is not clear how to evaluate the impact on highly complex deep learning methods. In this paper, we use deep learning ensembles and workflows to construct a system for automatically identifying data subsets that have a large impact on the trained models. These effects can be quantified and presented to the user for further inspection, which could improve data quality overall. We then present results from running this method on the near-exascale Summit supercomputer.</p>
+<!-- <p><a href=papers/7_Camelo.pdf>[Presentation]</a></p> -->
+        </div>
+</div> 
+      
+	          <hr class="featurette-divider">
+
+<div class="row featurette">
+        
+        
+        <div class="col-md-7">
+          <h2 class="lead">Deep Generative Models that Solve PDEs: Distributed Computing for Training Large Data-Free Models<br></h2>
+		<p class="lead"><span class="text-muted">Sergio Botelho (RocketML Inc),  Ameya Joshi (New York University (NYU), Biswajit Khara (Iowa State University), Vinay Rao (RocketML Inc), Soumik Sarkar (Iowa State University), Chinmay Hegde (New York University), Santi Adavani (RocketML Inc),  Baskar Ganapathysubramanian (Iowa State University)</span></p>
+		<p>Recent progress in scientific machine learning (SciML) has opened up the possibility of training novel neural network architectures that solve complex partial differential equations (PDEs). Several (nearly data free) approaches have been recently reported that successfully solve PDEs, with examples including deep feed forward networks, generative networks, and deep encoder-decoder networks. However, practical adoption of these approaches is limited by the difficulty in training these models, especially to make predictions at large output resolutions (greater or equal to 1024 x 1024). 
+
+Here we report on a software framework for data parallel distributed deep learning that resolves the twin challenges of training these large SciML models – training in reasonable time as well as distributing the storage requirements. Our framework provides several out of the box functionality including (a) loss integrity independent of number of processes, (b) synchronized batch normalization, and (c) distributed higher-order optimization methods.
+
+We show excellent scalability of this framework on both cloud as well as HPC clusters, and report on the interplay between bandwidth, network topology and bare metal vs cloud. We deploy this approach to train generative models of sizes hitherto not possible, showing that neural PDE solvers can be viably trained for practical applications. We also demonstrate that distributed higher-order optimization methods are 2-3 times faster than stochastic gradient-based methods and provide minimal convergence drift with higher batch-size.</p>
 <p><a href=papers/7_Camelo.pdf>[Presentation]</a></p> 
         </div>
-</div> -->
+</div> 
       
    
  
@@ -256,7 +286,7 @@ In this paper, we present the GradVis Toolbox, an open source library for effici
 
             <a name="contact"></a>
             <p><b>Contact:  Seung-Hwan Lim</b>, lims1 "at" ornl.gov</p>
-            <p>&copy; 2018 Oak Ridge National Laboratory</p>
+            <p>&copy; 2020 Oak Ridge National Laboratory</p>
           </div>
            
           <div style="float:right;">
