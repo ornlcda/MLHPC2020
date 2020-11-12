@@ -143,7 +143,7 @@
 		<h2 class="lead">EventGraD: Event-Triggered Communication in Parallel Stochastic Gradient Descent<br> </h2>
 		<p class="lead"><span class="text-muted">Soumyadip Ghosh (University of Notre Dame), Vijay Gupta (University of Notre Dame)</span></p>
 		<p>Communication in parallel systems consumes significant amount of time and energy which often turns out to be a bottleneck in distributed machine learning. In this paper, we present EventGrad - an algorithm with event-triggered communication in parallel stochastic gradient descent. The main idea of this algorithm is to modify the requirement of communication at every epoch to communicating only in certain epochs when necessary. In particular, the parameters are communicated only in the event when the change in their values exceed a threshold. The threshold for a parameter is chosen adaptively based on the rate of change of the parameter. The adaptive threshold ensures that the scheme can be applied to different models on different datasets without any change. We focus on data-parallel training of a popular convolutional neural network used for training the MNIST dataset and show that EventGrad can reduce the communication load by up to 70% while retaining the same level of accuracy.</p>
-	<!-- <p><a href=papers/2_Cong.pdf>[Presentation]</a></p> -->
+	<p><a href=slides/ws_mlhpce102s4-file1.pdf>[Presentation]</a></p>
         	</div>
       		</div>
 	  
@@ -155,7 +155,7 @@
           <h2 class="lead">A Benders Decomposition Approach to Correlation Clustering<br></h2>
 		<p class="lead"><span class="text-muted">Jovita Lukasik (University of Mannheim), Margret Keuper (University of Mannheim), Maneesh Singh (Verisk Analytics, Inc), Julian Yarkony (Verisk Analytics, Inc)</span></p>
 		<p>We tackle the problem of graph partitioning for image segmentation using correlation clustering (CC), which we treat as an integer linear program (ILP). We reformulate optimization in the ILP so as to admit efficient optimization via Benders decomposition, a classic technique from operations research. Our Benders decomposition formulation has many subproblems, each associated with a node in the CC instance's graph, which can be solved in parallel. Each Benders subproblem enforces the cycle inequalities corresponding to edges with negative (repulsive) weights attached to its corresponding node in the CC instance. We generate Magnanti-Wong Benders rows in addition to standard Benders rows to accelerate optimization. Our Benders decomposition approach provides a promising new avenue to accelerate optimization for CC, and, in contrast to previous cutting plane approaches, theoretically allows for massive parallelization.</p>
-	<!--	<p><a href=papers/3_Dryden.pdf>[Presentation]</a></p> -->
+		<p><a href=slides/ws_mlhpce103s4.pdf>[Presentation]</a></p>
         </div>
         
       </div>
@@ -166,7 +166,7 @@
           <h2 class="lead">Accelerating GPU-based Machine Learning in Python using MPI Library: A Case Study with MVAPICH2-GDR<br></h2>
 		<p class="lead"><span class="text-muted">Seyedeh Mahdieh Ghazimirsaeed (Ohio State University), Quentin Anthony (Ohio State University),  Aamir Shafi (Ohio State University), Hari Subramoni (Ohio State University), Dhabaleswar K. (DK) Panda (Ohio State University) </span></p>
 		<p>The growth of big data applications during the last decade has led to a surge in the deployment and popularity of machine learning libraries. On the other hand, the high performance offered by GPUs makes them well-suited for machine learning problems. To take advantage of the performance provided by GPUs for machine learning, NVIDIA has recently developed the cuML library. The cuML library is the GPU-counterpart of Scikit-learn and provides similar Pythonic interfaces while hiding the complexities of writing compute kernels for GPUs directly using CUDA. To support execution of machine learning workloads on Multi-Node Multi-GPU (MNMG) systems, the cuML library exploits NVIDIA Collective Communications Library (NCCL) as a backend for collective communications between the processes. On the other hand, MPI is a defacto standard for communication in HPC systems. Amongst various MPI libraries, MVAPICH2-GDR is the pioneer in optimizing communications for GPUs. This paper explores various aspects and challenges of providing MPI-based communication support for GPU accelerated cuML applications. More specifically, it proposes a Python API to take advantage of MPI-based communications for cuML applications. It also gives an in-depth analysis, characterization, and benchmarking of the cuML algorithms such as K-Means, Nearest Neighbors, Random Forest, and tSVD. Moreover, it provides a comprehensive performance evaluation and profiling study for MPI-based versus NCCL-based communication for these algorithms. The evaluation results show that the proposed MPI-based communication approach achieves up to 38%, 20%, 20%, and 26% performance gain for K-Means, Nearest Neighbors, Linear Regression, and tSVD, respectively on up to 32 GPUs. </p>
-<!--		<p><a href=papers/4_Tsai.pdf>[Presentation]</a></p> -->
+		<p><a href=slides/ws_mlhpce104s4.pdf>[Presentation]</a></p> 
         </div>
 	</div>
 	  
@@ -236,7 +236,7 @@ the application at peak efficiency.</p>
           <h2 class="lead">Accelerate Distributed Stochastic Descent for Nonconvex Optimization with Momentum<br></h2>
 		<p class="lead"><span class="text-muted">Guojing Cong (IBM Corporation), Tianyi Liu (Georgia Institute of Technology)</span></p>
 		<p>Momentum method has been used extensively in optimizers for deep learn- ing. Recent studies show that distributed train- ing through K-step averaging has many nice properties. We propose a momentum method for such model averaging ap- proaches. At each individual learner level traditional stochas- tic gradient is applied. At the meta-level (global learner level), one momentum term is applied and we call it block mo- mentum. We analyze the convergence and scaling properties of such momentum methods. Our experimental results show that block momentum not only accelerates training, but also achieves better results.</p>
-<!-- <p><a href=papers/7_Camelo.pdf>[Presentation]</a></p> -->
+ <p><a href=slides/ws_mlhpce105s4.pdf>[Presentation]</a></p>
         </div>
         
       </div>
